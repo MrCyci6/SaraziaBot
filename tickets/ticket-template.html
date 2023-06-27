@@ -1,0 +1,448 @@
+<!--
+Ticket Creator: {CREATOR_NAME}#{CREATOR_DISCRIMINATOR} / {CREATOR_ID}
+Creation Date (DD/MM/YYYY): {TICKET_DATE}
+Ticket Name: {TICKET_NAME}
+Support: {SUPPORT}
+Pseudo: {PSEUDO}
+Description: {DESCRIPTION}
+-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>View Transcript</title>
+    <link rel="icon" href="https://cdn.discordapp.com/icons/978335236440092713/c407708acde548772f05613a184d9afc.webp">
+    <link rel="stylesheet" href="https://use.typekit.net/prz3uef.css">
+    <style>
+        body,
+        html {
+            margin: 0px;
+            padding: 0px;
+            background-color: #0f1114;
+        }
+
+        .container {
+            width: 1200px;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            flex-direction: column;
+        }
+
+        a,
+        p {
+            font-family: "Open Sans", sans-serif;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Degular", sans-seri;
+            color: #ffffff;
+        }
+
+        .breadcrumbs {
+            font-size: 14px;
+            margin: 20px 0px 15px 0px;
+            padding: 0px;
+            list-style: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .box {
+            border-radius: 8px;
+            background-color: #1c1f23;
+            margin-bottom: 20px;
+        }
+
+        div {
+            -webkit-box-sizing: border-box;
+            /* Safari/Chrome, other WebKit */
+            -moz-box-sizing: border-box;
+            /* Firefox, other Gecko */
+            box-sizing: border-box;
+            /* Opera/IE 8+ */
+        }
+
+        header {
+            width: 100vw;
+        }
+
+        html,
+        body {
+            overflow-x: hidden;
+        }
+
+        .sidebar {
+            width: 320px;
+            padding: 30px;
+            height: fit-content;
+        }
+
+        .sidebar .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .sidebar .header img {
+            width: 26px;
+            border-radius: 100px;
+            margin-right: 10px;
+        }
+
+        .sidebar .header a {
+            font-family: "Degular", sans-seri;
+            font-size: 18px;
+        }
+
+        .sidebar .sub-cate {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+
+        .sidebar .sub-cate>p {
+            margin: 0px;
+            font-size: 12px;
+            opacity: 0.8;
+            margin-bottom: 6px;
+            letter-spacing: 0.4px;
+        }
+
+        .user-box {
+            display: flex;
+            align-items: center;
+            margin: 5px 0px;
+        }
+
+        .user-box img {
+            border-radius: 100px;
+            width: 26px;
+            margin-right: 10px;
+        }
+
+        #transcript .container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        #transcript .delete-content {
+            margin-top: 80px;
+            display: block;
+            font-size: 12px;
+            opacity: 0.5;
+            cursor: pointer;
+        }
+
+        #transcript .right {
+            width: 855px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #transcript .right .ticket-topbar {
+            display: flex;
+            align-items: center;
+        }
+
+        .ticket-topbar .item {
+            padding: 15px 20px;
+            display: flex;
+            justify-content: center;
+            padding-right: 60px;
+            flex-direction: column;
+            margin-right: 20px;
+        }
+
+        .ticket-topbar .item p {
+            font-family: "Degular", sans-seri;
+            letter-spacing: 0.4px;
+            font-size: 12px;
+            color: #b8b8b8;
+            margin: 0px 0px 5px 0px;
+        }
+
+        .messages {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 20px;
+            background-color: #14161a;
+            border-radius: 8px;
+        }
+
+        .messages .message {
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+        }
+
+        .messages .avatar {
+            display: flex;
+            align-items: center;
+        }
+
+        .messages .avatar img {
+            width: 26px;
+            border-radius: 100%;
+            margin-right: 10px;
+        }
+
+        .messages .avatar p {
+            font-family: "Degular", sans-seri;
+            font-size: 18px;
+            margin: 0px;
+            margin-bottom: 5px;
+        }
+
+        .messages .avatar a {
+            font-size: 12px;
+            display: block;
+            margin-bottom: 2px;
+            margin-left: 15px;
+        }
+
+        .message .content {
+            margin-top: -10px;
+            margin-left: 35px;
+        }
+
+        .message .content.embed {
+            padding: 5px 20px;
+            border-radius: 8px;
+            background-color: #1c1f23;
+            margin-top: 5px;
+        }
+
+        .message .content.embed .field h4 {
+            margin: 0px;
+        }
+
+        .message .content.embed .field p {
+            margin: 0px;
+        }
+
+        .message .content.embed .field {
+            margin: 5px;
+        }
+
+        .message .content.embed .field:last-of-type {
+            margin-bottom: 20px;
+        }
+
+        section#onetime-index .container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+
+        #onetime-index .delete-content {
+            margin-top: 80px;
+            display: block;
+            font-size: 12px;
+            opacity: 0.5;
+            cursor: pointer;
+        }
+
+        #onetime-index .right {
+            width: 855px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #onetime-index .right .ticket-topbar {
+            display: flex;
+            align-items: center;
+        }
+
+        .ticket-topbar .item {
+            padding: 15px 20px;
+            display: flex;
+            justify-content: center;
+            padding-right: 60px;
+            flex-direction: column;
+            margin-right: 20px;
+        }
+
+        .ticket-topbar .item p {
+            font-family: "Degular", sans-seri;
+            letter-spacing: 0.4px;
+            font-size: 12px;
+            color: #b8b8b8;
+            margin: 0px 0px 5px 0px;
+        }
+
+        .messages {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 20px;
+            background-color: #14161a;
+            border-radius: 8px;
+        }
+
+        .messages .message {
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+        }
+
+        .messages .avatar {
+            display: flex;
+            align-items: center;
+        }
+
+        .messages .avatar img {
+            width: 26px;
+            border-radius: 100%;
+            margin-right: 10px;
+        }
+
+        .messages .avatar p {
+            font-family: "Degular", sans-seri;
+            font-size: 18px;
+            margin: 0px;
+            margin-bottom: 5px;
+        }
+
+        .messages .avatar a {
+            font-size: 12px;
+            display: block;
+            margin-bottom: 2px;
+            margin-left: 15px;
+        }
+
+        .message .content {
+            margin-top: -10px;
+            margin-left: 35px;
+        }
+
+        .message .content.embed {
+            padding: 5px 20px;
+            border-radius: 8px;
+            background-color: #1c1f23;
+            margin-top: 5px;
+        }
+
+        .unknownTranscript {
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            max-width: 500px;
+        }
+
+        .unknownTranscript h2 {
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
+
+        .unknownTranscript a {
+            display: block;
+            padding: 8px 20px;
+            background-color: white;
+            width: fit-content;
+            border-radius: 5px;
+            color: black;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            font-size: 16px;
+        }
+
+        .unknownTranscript p {
+            margin-bottom: 50px;
+        }
+
+        @media only screen and (max-width: 1220px) {
+            #onetime-index .right {
+                max-width: 855px;
+                margin-left: 20px;
+            }
+        }
+
+        @media only screen and (max-width: 900px) {
+            section#onetime-index .container {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            #onetime-index .container .left {
+                width: 100%;
+            }
+
+            #onetime-index .right {
+                margin: 0px;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+    <div id="toasts"></div>
+    <div class="wrapper">
+        <section id="onetime-index">
+            <div class="container">
+                <div class="left sidebar box">
+                    <div class="header"><img
+                            src="https://cdn.discordapp.com/icons/978335236440092713/c407708acde548772f05613a184d9afc.webp"><a>Sarazia | 100% Farm2Win</a></div>
+                    <div class="sub-cate" id=participants>
+                        <p>PARTICIPANTS</p>
+
+                    </div>
+                </div>
+                <div class="right">
+
+                    <div class="ticket-topbar" style="">
+                        <div class="item box">
+                            <p>TICKET NAME</p><a>{TICKET_NAME}</a>
+                        </div>
+                        <div class="item box">
+                            <p>CREATED (DD/MM/YYYY)</p><a>{TICKET_DATE}</a>
+                        </div>
+                        <div class="item box">
+                            <p>revenir en arrière</p><a href="/tickets">RETOUR</a>
+                        </div>  
+                    </div>
+
+                    <div class="messages" id="messages">
+
+                        <div class="message">
+                            <div class="avatar"><img src="https://cdn.discordapp.com/icons/978335236440092713/c407708acde548772f05613a184d9afc.webp">
+                                <p>SaraziaBot#9408</p><a>{TICKET_DATE}</a>
+                            </div>
+
+                            <div class="message">
+                                <div class="content">
+                                    <p>
+                                        Bonjour et bienvenue sur le support de Sarazia !</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
