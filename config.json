@@ -1,10 +1,10 @@
 {
 	"bot": {
-		"token": "MTEyMTc2NzU2NzAwNzE3MDY4NA.GcZGez.0wO7DrPRiUqLVy-lISVkM_dRA9LKZDLEQElAOY",
+		"token": "",
 		"id": "1121767567007170684",
-		"secretId": "4V2g1RQQDsAr6-KUw3xMZfy06_prIhTG",
+		"secretId": "",
 		"port": 3000,
-		"callbackUrl": "http://localhost:3000/auth/discord/callback",
+		"callbackUrl": "http://tickets.sarazia.eu/auth/discord/callback",
 		"scope": ["identify"],
 		"status": "play.sarazia.fr",
 		"statusType": "Competing",
