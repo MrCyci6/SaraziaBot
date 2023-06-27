@@ -1,0 +1,58 @@
+{
+	"bot": {
+		"token": "MTEyMTc2NzU2NzAwNzE3MDY4NA.GcZGez.0wO7DrPRiUqLVy-lISVkM_dRA9LKZDLEQElAOY",
+		"id": "1121767567007170684",
+		"secretId": "4V2g1RQQDsAr6-KUw3xMZfy06_prIhTG",
+		"port": 3000,
+		"callbackUrl": "http://localhost:3000/auth/discord/callback",
+		"scope": ["identify"],
+		"status": "play.sarazia.fr",
+		"statusType": "Competing",
+		"name": "Sarazia"
+	},
+
+	"embed": {
+		"color": "#ff0000"
+	},
+
+	"owners": [
+		"1044295629154816010"
+	],
+
+	"server": {
+		"id": "1121767449948336229",
+		"soutien_status": ".gg/sarazia",
+		"ip": "play.sarazia.fr",
+		"name": "Sarazia | 100% Farm2Win"
+	},
+
+	"roles": {
+		"joueur": "1121767778005811290",
+		"staff": "1121767840308023336",
+		"soutien": "1121767863544467506",
+		"notif_events": "",
+		"notif_changelogs": "",
+		"notif_sondages": ""
+	},
+
+	"channels": {
+		"bye": "",
+		"bienvenue": "1121768089076383865",
+		"suggestion": "1121768146030825522",
+		"logs": "1121768148069257226",
+		"automention": [
+			"1121768147016482828",
+			"1121768146030825522"
+		],
+		"id_members": "1121768257167310912",
+		"name_members": "👥 {count} Membres"
+	},
+
+	"categories": {
+		"ticket": "1121767451126927382"
+	},
+
+	"messages": {
+		"noperm": ":x: Tu ne peux pas faire ça !"
+	}
+}

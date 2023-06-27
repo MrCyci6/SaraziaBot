@@ -1,0 +1,31 @@
+{
+  "name": "sarazia-2.0",
+  "version": "1.0.0",
+  "description": "Custom bot for Sarazia with web interface",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm i | node ."
+  },
+  "author": "MrCyci6",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "cheerio": "^1.0.0-rc.12",
+    "discord-giveaways": "^6.0.1",
+    "discord.js": "^14.11.0",
+    "dotenv": "^16.3.1",
+    "easy-number-formatter": "^1.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "mariadb": "^3.2.0",
+    "moment": "^2.29.4",
+    "ms": "^2.1.3",
+    "passport": "^0.6.0",
+    "passport-discord": "^0.1.4",
+    "path": "^0.12.7",
+    "socket.io": "^4.7.0"
+  }
+}
