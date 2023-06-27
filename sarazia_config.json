@@ -1,8 +1,8 @@
 {
 	"bot": {
-		"token": "MTA2ODUxOTg5MTIxODQ3NzA2Nw.GDfEwk.ds3_PVjGM4EvNaFuky1K3Ctc_gturGpHKipYRQ",
+		"token": "",
 		"id": "1068519891218477067",
-		"secretId": "EBoeUZmEW8-J_NNEHylM0B5heTeaBtU1",
+		"secretId": "",
 		"port": 3000,
 		"callbackUrl": "http://185.246.85.15:3000/auth/discord/callback",
 		"scope": ["identify"],
