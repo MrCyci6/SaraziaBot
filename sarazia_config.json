@@ -4,7 +4,7 @@
 		"id": "1068519891218477067",
 		"secretId": "",
 		"port": 3000,
-		"callbackUrl": "http://185.246.85.15:3000/auth/discord/callback",
+		"callbackUrl": "http://localhost:3000/auth/discord/callback",
 		"scope": ["identify"],
 		"status": "play.sarazia.fr",
 		"statusType": "Competing",
